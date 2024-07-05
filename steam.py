@@ -9,6 +9,7 @@ import os
 # Simulate a function that generates a response with a delay
 def generate_response(user_message,key):
     dbpath = 'faiss_db'
+    key = st.secrets["gemini_key"]
     response = user_input(user_message, dbpath,key)
     
     time.sleep(2)  # Simulating a delay for response generation
